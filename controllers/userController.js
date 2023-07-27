@@ -125,7 +125,6 @@ exports.forgotPassword = async (req, res) => {
         // Save the reset token and expiration time to the user document
         await user.save();
 
-        // Send the reset token to the user's email (implement your own email sending logic)
 
         res.status(200).json({ message: 'Password reset token sent to your email' });
     } catch (error) {
